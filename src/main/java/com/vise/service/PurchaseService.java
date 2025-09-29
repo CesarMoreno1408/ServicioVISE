@@ -1,7 +1,7 @@
 package com.vise.service;
 
 import java.time.DayOfWeek;
-import java.time.ZonedDateTime;
+import java.time.LocalDate;
 
 import org.springframework.stereotype.Service;
 
@@ -77,8 +77,10 @@ public class PurchaseService {
         // ✅ Calcular descuentos (beneficios)
         double discount = 0;
         String benefit = "";
-        ZonedDateTime dt = ZonedDateTime.parse(request.purchaseDate());
-        DayOfWeek day = dt.getDayOfWeek();
+
+        // ✅ ahora usamos LocalDate para soportar "2025-09-29"
+        LocalDate date = LocalDate.parse(request.purchaseDate());
+        DayOfWeek day = date.getDayOfWeek();
         boolean exterior = !request.purchaseCountry().equalsIgnoreCase(c.getCountry());
 
         switch (c.getCardType()) {
