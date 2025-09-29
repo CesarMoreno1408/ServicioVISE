@@ -27,17 +27,17 @@ public class ClientService {
 
     private String validateClient(Client c) {
         switch (c.getCardType()) {
-            case GOLD:
+            case Gold:
                 if (c.getMonthlyIncome() < 500)
                     return "Ingreso mínimo de 500 USD requerido para Gold";
                 break;
-            case PLATINUM:
+            case Platinum:
                 if (c.getMonthlyIncome() < 1000)
                     return "Ingreso mínimo de 1000 USD requerido para Platinum";
                 if (!c.isViseClub())
                     return "Suscripción VISE CLUB requerida para Platinum";
                 break;
-            case BLACK:
+            case Black:
                 if (c.getMonthlyIncome() < 2000)
                     return "Ingreso mínimo de 2000 USD requerido para Black";
                 if (!c.isViseClub())
@@ -48,7 +48,7 @@ public class ClientService {
                         || c.getCountry().equalsIgnoreCase("Irán"))
                     return "Cliente no puede residir en China, Vietnam, India o Irán con tarjeta Black";
                 break;
-            case WHITE:
+            case White:
                 if (c.getMonthlyIncome() < 2000)
                     return "Ingreso mínimo de 2000 USD requerido para White";
                 if (!c.isViseClub())

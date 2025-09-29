@@ -24,13 +24,13 @@ public class PurchaseService {
 
         // 🔴 Validar restricciones por tarjeta antes de permitir la compra
         switch (c.getCardType()) {
-            case GOLD:
+            case Gold:
                 if (c.getMonthlyIncome() < 500) {
                     return new Response("Rejected",
                             "El cliente no cumple ingreso mínimo de 500 USD para Gold");
                 }
                 break;
-            case PLATINUM:
+            case Platinum:
                 if (c.getMonthlyIncome() < 1000) {
                     return new Response("Rejected",
                             "El cliente no cumple ingreso mínimo de 1000 USD para Platinum");
@@ -40,7 +40,7 @@ public class PurchaseService {
                             "El cliente no tiene la suscripción VISE CLUB requerida para Platinum");
                 }
                 break;
-            case BLACK:
+            case Black:
                 if (c.getMonthlyIncome() < 2000) {
                     return new Response("Rejected",
                             "El cliente no cumple ingreso mínimo de 2000 USD para Black");
@@ -55,7 +55,7 @@ public class PurchaseService {
                             "El cliente con tarjeta Black no puede realizar compras desde " + request.purchaseCountry());
                 }
                 break;
-            case WHITE:
+            case White:
                 if (c.getMonthlyIncome() < 2000) {
                     return new Response("Rejected",
                             "El cliente no cumple ingreso mínimo de 2000 USD para White");
@@ -82,14 +82,14 @@ public class PurchaseService {
         boolean exterior = !request.purchaseCountry().equalsIgnoreCase(c.getCountry());
 
         switch (c.getCardType()) {
-            case GOLD:
+            case Gold:
                 if ((day == DayOfWeek.MONDAY || day == DayOfWeek.TUESDAY || day == DayOfWeek.WEDNESDAY)
                         && request.amount() > 100) {
                     discount = request.amount() * 0.15;
                     benefit = "Lunes-Miércoles - 15%";
                 }
                 break;
-            case PLATINUM:
+            case Platinum:
                 if ((day == DayOfWeek.MONDAY || day == DayOfWeek.TUESDAY || day == DayOfWeek.WEDNESDAY)
                         && request.amount() > 100) {
                     discount = request.amount() * 0.20;
@@ -102,7 +102,7 @@ public class PurchaseService {
                     benefit = "Compra exterior - 5%";
                 }
                 break;
-            case BLACK:
+            case Black:
                 if ((day == DayOfWeek.MONDAY || day == DayOfWeek.TUESDAY || day == DayOfWeek.WEDNESDAY)
                         && request.amount() > 100) {
                     discount = request.amount() * 0.25;
@@ -115,7 +115,7 @@ public class PurchaseService {
                     benefit = "Compra exterior - 5%";
                 }
                 break;
-            case WHITE:
+            case White:
                 if ((day == DayOfWeek.MONDAY || day == DayOfWeek.TUESDAY || day == DayOfWeek.WEDNESDAY
                         || day == DayOfWeek.THURSDAY || day == DayOfWeek.FRIDAY)
                         && request.amount() > 100) {
