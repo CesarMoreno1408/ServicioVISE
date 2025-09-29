@@ -1,1 +1,9 @@
 D:\SeptimoSemestre\DevOps\vise-api\src\main\java\com\vise\App.java
+D:\SeptimoSemestre\DevOps\vise-api\src\main\java\com\vise\controller\ClientController.java
+D:\SeptimoSemestre\DevOps\vise-api\src\main\java\com\vise\controller\PurchaseController.java
+D:\SeptimoSemestre\DevOps\vise-api\src\main\java\com\vise\model\CardType.java
+D:\SeptimoSemestre\DevOps\vise-api\src\main\java\com\vise\model\Client.java
+D:\SeptimoSemestre\DevOps\vise-api\src\main\java\com\vise\repository\ClientRepository.java
+D:\SeptimoSemestre\DevOps\vise-api\src\main\java\com\vise\service\ClientService.java
+D:\SeptimoSemestre\DevOps\vise-api\src\main\java\com\vise\service\PurchaseService.java
+D:\SeptimoSemestre\DevOps\vise-api\src\main\java\com\vise\ViseApiApplication.java

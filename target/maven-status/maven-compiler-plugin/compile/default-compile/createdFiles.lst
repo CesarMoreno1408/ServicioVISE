@@ -1,1 +1,17 @@
+com\vise\service\PurchaseService$PurchaseRequest.class
 com\vise\App.class
+com\vise\ViseApiApplication.class
+com\vise\service\ClientService$ResponseRegistered.class
+com\vise\service\PurchaseService$PurchaseResponse$Purchase.class
+com\vise\model\CardType.class
+com\vise\service\PurchaseService$1.class
+com\vise\controller\ClientController.class
+com\vise\repository\ClientRepository.class
+com\vise\service\ClientService.class
+com\vise\service\ClientService$1.class
+com\vise\service\PurchaseService.class
+com\vise\model\Client.class
+com\vise\service\ClientService$Response.class
+com\vise\service\PurchaseService$PurchaseResponse.class
+com\vise\service\PurchaseService$Response.class
+com\vise\controller\PurchaseController.class
