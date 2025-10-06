@@ -7,5 +7,10 @@ RUN mvn clean package -DskipTests
 FROM eclipse-temurin:17-jre-jammy
 WORKDIR /app
 COPY --from=build /app/target/vise-api-1.0-SNAPSHOT.jar app.jar
+
+# Necesario porque 443 es puerto privilegiado
+USER root
 EXPOSE 443
-ENTRYPOINT ["java","-jar","app.jar"]
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
+
