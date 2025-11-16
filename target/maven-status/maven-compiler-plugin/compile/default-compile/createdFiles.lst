@@ -3,6 +3,7 @@ com\vise\App.class
 com\vise\ViseApiApplication.class
 com\vise\service\ClientService$ResponseRegistered.class
 com\vise\service\PurchaseService$PurchaseResponse$Purchase.class
+com\vise\config\OtelConfiguration.class
 com\vise\model\CardType.class
 com\vise\service\PurchaseService$1.class
 com\vise\controller\ClientController.class
