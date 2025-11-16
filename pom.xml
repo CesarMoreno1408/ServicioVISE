@@ -22,6 +22,27 @@
     </properties>
 
     <dependencies>
+        <!-- OpenTelemetry Core -->
+        <dependency>
+            <groupId>io.opentelemetry</groupId>
+            <artifactId>opentelemetry-api</artifactId>
+            <version>1.34.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.opentelemetry</groupId>
+            <artifactId>opentelemetry-sdk</artifactId>
+            <version>1.34.1</version>
+        </dependency>
+
+        <!-- Exportador OTLP HTTP (para enviar trazas a Axiom) -->
+        <dependency>
+            <groupId>io.opentelemetry</groupId>
+            <artifactId>opentelemetry-exporter-otlp</artifactId>
+            <version>1.34.1</version>
+        </dependency>
+
+
         <!-- Spring Web: API REST -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
